@@ -46,7 +46,6 @@ app.delete('/api/delete/:id', (req, res) => {
 });
 
 app.get('/api/book', (req, res) => {
-  console.log('get');
   Book.find({})
     .then((dbBook) => {
       res.json(dbBook);

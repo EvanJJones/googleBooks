@@ -24,7 +24,9 @@ function SavedBookList(props) {
     console.log(id);
     API.deleteBook(id)
       .then((res) => {
-        console.log('deleted');
+        const filtered = books.filter((book) => book._id !== id);
+        setBooks(filtered);
+        console.log(books);
       })
       .catch((err) => console.log(err));
   };
@@ -35,13 +37,29 @@ function SavedBookList(props) {
   }, []);
 
   return (
-    <div className="container">
+    <div>
       {books.map((book) => (
-        <div>
-          {book.title}
-          {book.image}
-          {book.authors}
-          <button onClick={() => deleteBook(book._id)}>Remove</button>
+        <div class="card" key={book._id}>
+          <div class="card-header">
+            <a href={book.link}>
+              <h2>{book.title}</h2>{' '}
+            </a>{' '}
+            By: {book.authors}
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <img
+                className="float-left m-3"
+                src={
+                  book.image
+                    ? book.image
+                    : 'https://via.placeholder.com/128x171'
+                }
+              />
+              <p className="m-3">{book.description}</p>
+              <button onClick={() => deleteBook(book._id)}>Remove</button>
+            </blockquote>
+          </div>
         </div>
       ))}
     </div>

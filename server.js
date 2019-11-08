@@ -30,7 +30,23 @@ app.post('/api/book', ({ body }, res) => {
     });
 });
 
+app.delete('/api/delete/:id', (req, res) => {
+  Book.remove(
+    {
+      _id: req.params.id
+    },
+    (error, data) => {
+      if (error) {
+        res.send(error);
+      } else {
+        res.send(data);
+      }
+    }
+  );
+});
+
 app.get('/api/book', (req, res) => {
+  console.log('get');
   Book.find({})
     .then((dbBook) => {
       res.json(dbBook);

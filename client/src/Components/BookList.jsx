@@ -24,9 +24,14 @@ function Books(props) {
       title: title,
       authors: authors,
       description: description,
-      image: imageLinks.thumbnail,
       link: infoLink
     };
+    if (!imageLinks) {
+      newBook.image = 'https://via.placeholder.com/128x171';
+    } else {
+      newBook.image = imageLinks.thumbnail;
+    }
+
     API.saveBook(newBook)
       .then((res) => {})
       .catch((err) => console.log(err));

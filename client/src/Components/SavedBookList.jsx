@@ -39,15 +39,15 @@ function SavedBookList(props) {
   return (
     <div>
       {books.map((book) => (
-        <div class="card" key={book._id}>
-          <div class="card-header">
+        <div className="card" key={book._id}>
+          <div className="card-header">
             <a href={book.link}>
               <h2>{book.title}</h2>{' '}
             </a>{' '}
             By: {book.authors}
           </div>
-          <div class="card-body">
-            <blockquote class="blockquote mb-0">
+          <div className="card-body">
+            <blockquote className="blockquote mb-0">
               <img
                 className="float-left m-3"
                 src={

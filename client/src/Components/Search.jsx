@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import API from '../utils/API';
+import React, { useState, useEffect } from "react";
+import API from "../utils/API";
 
 const styles = {
-  width: '100%',
-  height: '80%',
-  display: 'flex',
-  justifyContent: 'space-evenly',
-  flexWrap: 'wrap'
+  width: "100%",
+  height: "80%",
+  display: "flex",
+  justifyContent: "space-evenly",
+  flexWrap: "wrap"
 };
 
 function Search(props) {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <>
@@ -19,10 +19,10 @@ function Search(props) {
         type="text"
         placeholder="Search for a book"
         name="search"
-        onChange={(e) => setSearchTerm(e.target.value)}
+        onChange={e => setSearchTerm(e.target.value)}
       />
       <button onClick={() => props.searchGoogleBooks(searchTerm)}>
-        button
+        Search
       </button>
     </>
   );

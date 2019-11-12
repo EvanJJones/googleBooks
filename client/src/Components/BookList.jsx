@@ -40,15 +40,15 @@ function Books(props) {
   return (
     <div>
       {props.books.map((book) => (
-        <div class="card" key={book.id}>
-          <div class="card-header">
+        <div className="card" key={book.id}>
+          <div className="card-header">
             <a href={book.volumeInfo.infoLink}>
               <h2>{book.volumeInfo.title}</h2>{' '}
             </a>{' '}
             By: {book.volumeInfo.authors}
           </div>
-          <div class="card-body">
-            <blockquote class="blockquote mb-0">
+          <div className="card-body">
+            <blockquote className="blockquote mb-0">
               <img
                 className="float-left m-3"
                 src={

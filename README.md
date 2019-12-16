@@ -10,7 +10,7 @@ Search for a book using the search box, the results will appear below. You can t
 
 ## Images
 
-![Screenshot](./Screenshot1.png)
+![Screenshot](./Screenshot.png)
 
 ## Author
 

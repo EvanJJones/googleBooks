@@ -13,6 +13,7 @@ function SavedBookList(props) {
   // state that will hold the list of saved bookks from db
   const [books, setBooks] = useState([]);
 
+  // gets ssaved books from the db
   const getSavedBooks = () => {
     API.getSaved()
       .then(res => {

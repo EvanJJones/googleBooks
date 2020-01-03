@@ -15,6 +15,7 @@ function Container(props) {
   // state that holds the books to display
   const [books, setBooks] = useState([]);
 
+  // hits the google bookks api and puts them into state
   const searchGoogleBooks = query => {
     API.search(query)
       .then(res => {

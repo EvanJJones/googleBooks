@@ -34,8 +34,8 @@ function SavedBookList(props) {
       .catch(err => console.log(err));
   };
 
+  // essentially component did mount, runs the initial search
   useEffect(() => {
-    // Update the document title using the browser API
     getSavedBooks();
   }, []);
 

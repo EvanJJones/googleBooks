@@ -22,6 +22,7 @@ function SavedBookList(props) {
       .catch(err => console.log(err));
   };
 
+  // removes a book from the db
   const deleteBook = id => {
     console.log(id);
     API.deleteBook(id)

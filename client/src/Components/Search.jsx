@@ -10,6 +10,7 @@ const styles = {
 };
 
 function Search(props) {
+  // holds the text in the seachbox
   const [searchTerm, setSearchTerm] = useState("");
 
   return (

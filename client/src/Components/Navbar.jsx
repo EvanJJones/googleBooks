@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+
+// navbar that holds links
 
 const styles = {
-  width: '100%',
-  height: '80%',
-  display: 'flex',
-  justifyContent: 'space-evenly',
-  flexWrap: 'wrap'
+  width: "100%",
+  height: "80%",
+  display: "flex",
+  justifyContent: "space-evenly",
+  flexWrap: "wrap"
 };
 
 function Navbar(props) {
